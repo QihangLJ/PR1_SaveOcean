@@ -13,10 +13,10 @@ namespace ObjectClasses
             base(name, superFamily, species, weight)
         { }
 
-        public override int Treatment(int afectation, int value)
+        public override int Treatment(int affectation, int value)
         {
-            double doubleValue = Convert.ToDouble(afectation);
-            return (int)(afectation - Math.Log10(doubleValue) - value);
+            double doubleValue = Convert.ToDouble(affectation);
+            return (int)(affectation - Math.Log10(doubleValue) - value);
         }
 
     }

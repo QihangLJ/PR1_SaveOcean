@@ -7,7 +7,6 @@
         protected string? Species { get; set; }
         protected float Weight { get; set; }
 
-
         protected AAnimal(string name, string superFamily, string species, float weight)
         {
             Name = name;

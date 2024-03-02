@@ -11,9 +11,9 @@ namespace ObjectClasses
         public SeaTurtle(string name, string superFamily, string species, float weight) : 
             base(name, superFamily, species, weight) {}
 
-        public override int Treatment(int afectation, int value)
+        public override int Treatment(int affectation, int value)
         {
-            return afectation - (( afectation - 2 ) * ( 2 * afectation + 3 )) - value;
+            return affectation - (( affectation - 2 ) * ( 2 * affectation + 3 )) - value;
         }
 
     }

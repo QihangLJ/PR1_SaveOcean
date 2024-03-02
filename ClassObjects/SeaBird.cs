@@ -12,9 +12,9 @@ namespace ObjectClasses
             base(name, superFamily, species, weight)
         { }
 
-        public override int Treatment(int afectation, int value)
+        public override int Treatment(int affectation, int value)
         {
-            return afectation - ( (afectation * afectation) + value);
+            return affectation - ( (affectation * affectation) + value);
         }
     }
 }
