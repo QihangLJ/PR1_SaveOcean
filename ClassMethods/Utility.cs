@@ -12,5 +12,11 @@
             string date = DateTime.Now.ToString("dd/MM/yyyy");
             return date;
         }
+
+        public static int RandomAffectationGrade()
+        {
+            Random random = new Random();
+            return random.Next(1,100);
+        }
     }
 }
