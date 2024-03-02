@@ -1,6 +1,4 @@
-﻿
-
-namespace ObjectClasses
+﻿namespace ObjectClasses
 {
     public abstract class AAnimal
     {
