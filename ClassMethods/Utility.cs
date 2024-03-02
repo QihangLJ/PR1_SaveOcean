@@ -7,6 +7,10 @@
             return value >= min && value <= max;
         }
 
-
+        public static string RegisterDate()
+        {
+            string date = DateTime.Now.ToString("dd/MM/yyyy");
+            return date;
+        }
     }
 }

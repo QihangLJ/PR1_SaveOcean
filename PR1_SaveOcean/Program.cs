@@ -11,6 +11,7 @@ namespace MyProgram
         {
             string uwu = Rescue.GenerateCode();
             Console.WriteLine(uwu);
+            Console.WriteLine(Utility.RegisterDate());
         }
     }
 }
