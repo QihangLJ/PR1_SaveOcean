@@ -48,12 +48,20 @@ namespace InterfaceClasses
             Console.WriteLine(MsgOptions);
         }
 
-        public static void TreatmentResultMessage()
+        public static void TreatmentResultMessage(int value)
         {
-            const string MsgReduce = "The applied treatment has reduce the (AG) to {0}%.";
-            const string MsgIncrease = "The applied treatment has increase the (AG) to {0}%.";
-            const string MsgNotEffective = "The applied treatment has not change the (AG).";
+            const string MsgReduce = "The applied treatment has reduce the (AG) to {0}%. ";
+            const string MsgNotEffective = "It wasn't effective so we need to move the animal to a medical center. Your experience reduce -20XP.";
+            const string MsgEffective = "The animal has recovered and it can returns to his habitat. Your experience increase +50XP.";
 
+            Console.Write(MsgReduce, value);
+            Console.WriteLine(value > 5 ? MsgNotEffective : MsgEffective);
+        }
+
+        public static void ExperienceResultMessage(int value)
+        {
+            const string Message = "Your total experience {0}";
+            Console.WriteLine(Message, value);
         }
 
         public static void EndMessage()
