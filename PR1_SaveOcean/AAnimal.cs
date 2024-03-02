@@ -18,6 +18,6 @@ namespace ObjectClasses
             Weight = weight;
         }
 
-        public abstract void Treatment();
+        public abstract int Treatment(int afectation, int value);
     }
 }
