@@ -16,7 +16,7 @@ namespace ObjectClasses
         public override int Treatment(int afectation, int value)
         {
             double doubleValue = Convert.ToDouble(afectation);
-            return (int) (afectation - Math.Log10(doubleValue) - value);
+            return (int)(afectation - Math.Log10(doubleValue) - value);
         }
 
     }
