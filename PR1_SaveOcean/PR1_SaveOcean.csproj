@@ -8,10 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\ClassMethods.csproj" />
     <ProjectReference Include="..\ClassMethods\ClassMethods.csproj" />
     <ProjectReference Include="..\ClassObjects\ClassObjects.csproj" />
-    <ProjectReference Include="..\ClassObject\ClassObjects.csproj" />
   </ItemGroup>
 
 </Project>
