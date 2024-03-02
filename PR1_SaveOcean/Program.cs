@@ -9,9 +9,20 @@ namespace MyProgram
     {
         public static void Main()
         {
-            string uwu = Rescue.GenerateCode();
-            Console.WriteLine(uwu);
-            Console.WriteLine(Utility.RegisterDate());
+            const string MsgInvalidValue = "Invalid value, please enter a valid value.";
+            const int InputMin = 1, InputMax = 2;
+            int userInput;
+
+            Print.StartMessage();
+            do
+            {
+                userInput = Convert.ToInt32(Console.ReadLine());
+                if (!Utility.CheckIntInput(userInput, InputMin, InputMax))
+                {
+                    Console.WriteLine(MsgInvalidValue);
+                }
+            } while (!Utility.CheckIntInput(userInput, InputMin, InputMax));
+
         }
     }
 }
