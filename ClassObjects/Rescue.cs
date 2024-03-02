@@ -23,6 +23,14 @@
             Location = location;
         }
 
+        public static string GenerateCode()
+        {
+            Random random = new Random();
+            string code = "RES" + random.Next(1000).ToString("000");
+
+            return code;
+        }
+
     }
 }
 
