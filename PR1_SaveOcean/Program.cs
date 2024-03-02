@@ -9,9 +9,8 @@ namespace MyProgram
     {
         public static void Main()
         {
-            Print.StartMessage();
-            Print.ChooseRole(12,3);
-            Print.ChooseName();
+            string uwu = Rescue.GenerateCode();
+            Console.WriteLine(uwu);
         }
     }
 }
