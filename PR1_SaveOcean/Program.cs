@@ -17,7 +17,7 @@ namespace MyProgram
             const int SeaTurtleNum = 1, SeaBirdNum = 2, CetaceanNum = 3;
             const int TechnicalExp = 45, VetExp = 80;
 
-            string userName;
+            string? userName;
             int userInput, userExperience;
             Random random = new Random();
 

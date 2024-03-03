@@ -21,7 +21,7 @@ namespace ObjectClasses
             return (int)(affectation - Math.Log10(doubleValue) - value);
         }
 
-        public override string ToString() => SuperFamily;
+        public override string ToString() => SuperFamily != null ? SuperFamily : "Null";
 
         public override string GetDocument() =>
             $"+-------------------------------------------------------------+\r\n" +
