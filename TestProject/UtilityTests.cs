@@ -84,6 +84,18 @@ namespace TestProject
         }
 
         [TestMethod]
+        public void RegisterDate_DateFormat_ResultTrue()
+        {
+            //Arrange
+
+            //Act
+            string result = Utility.RegisterDate();
+
+            //Assert
+            Assert.IsTrue(result.Length == 10);
+        }
+
+        [TestMethod]
         public void RandomAffectationGrade_ValueIsInsideTheRange_ReturnsTrue()
         {
             // Act
