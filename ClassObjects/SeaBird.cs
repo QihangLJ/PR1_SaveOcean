@@ -9,15 +9,14 @@ namespace ObjectClasses
     public class SeaBird : AAnimal
     {
         public SeaBird(string name, string superFamily, string species, float weight) :
-            base(name, superFamily, species, weight)
-        { }
+            base(name, superFamily, species, weight) { }
 
         public SeaBird() : base() { }
 
         public override int Treatment(int affectation, int healOption)
         {
             int value = healOption == 1 ? 5 : 0;
-            return affectation - ( (affectation * affectation) + value);
+            return (int) affectation - ( (affectation * affectation) + value);
         }
 
         public override string ToString() => SuperFamily ?? "Null";

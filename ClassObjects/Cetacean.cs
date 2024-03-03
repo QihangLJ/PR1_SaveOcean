@@ -9,8 +9,7 @@ namespace ObjectClasses
     public class Cetacean : AAnimal
     {
         public Cetacean(string name, string superFamily, string species, float weight) :
-            base(name, superFamily, species, weight)
-        { }
+            base(name, superFamily, species, weight) { }
 
         public Cetacean() : base() { }
 

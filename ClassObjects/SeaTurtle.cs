@@ -9,14 +9,14 @@ namespace ObjectClasses
     public class SeaTurtle : AAnimal
     {
         public SeaTurtle(string name, string superFamily, string species, float weight) : 
-            base(name, superFamily, species, weight) {}
+            base(name, superFamily, species, weight) { }
 
-        public SeaTurtle() : base() {}
+        public SeaTurtle() : base() { }
 
         public override int Treatment(int affectation, int healOption)
         {
             int value = 5;
-            return affectation - (( affectation - 2 ) * ( 2 * affectation + 3 )) - value;
+            return (int) affectation - (( affectation - 2 ) * ( 2 * affectation + 3 )) - value;
         }
 
         public override string ToString() => SuperFamily ?? "Null";
