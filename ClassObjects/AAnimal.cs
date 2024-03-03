@@ -1,19 +1,11 @@
 ﻿namespace ObjectClasses
 {
-    public abstract class AAnimal
+    public abstract class AAnimal(string name, string superFamily, string species, float weight)
     {
-        public string? Name { get; set ; }
-        public string? SuperFamily { get; set; }
-        public string? Species { get; set; }
-        public float Weight { get; set; }
-
-        protected AAnimal(string name, string superFamily, string species, float weight)
-        {
-            Name = name;
-            SuperFamily = superFamily;
-            Species = species;
-            Weight = weight;
-        }
+        public string? Name { get; set; } = name;
+        public string? SuperFamily { get; set; } = superFamily;
+        public string? Species { get; set; } = species;
+        public float Weight { get; set; } = weight;
 
         protected AAnimal() : this("", "", "", 0) {}
 

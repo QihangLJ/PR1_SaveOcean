@@ -19,7 +19,7 @@ namespace MyProgram
 
             string? userName;
             int userInput, userExperience;
-            Random random = new Random();
+            Random random = new();
 
             Print.StartMessage();
             Console.ForegroundColor = ConsoleColor.Green;
@@ -29,19 +29,12 @@ namespace MyProgram
 
             if (userInput == Play)
             {
-                AAnimal animal;
-                switch (random.Next(SeaTurtleNum, CetaceanNum + Offset))
+                AAnimal animal = random.Next(SeaTurtleNum, CetaceanNum + Offset) switch
                 {
-                    case SeaTurtleNum:
-                        animal = new SeaTurtle(AnimalName, "Sea Turtle", "Caretta Turtle", 9.5f);
-                        break;
-                    case SeaBirdNum:
-                        animal = new SeaBird(AnimalName, "Sea Bird  ", "Emperor Penguin", 15.2f);
-                        break;
-                    default:
-                        animal = new Cetacean(AnimalName, "Cetacean  ", "Listed Dolphin", 20.7f);
-                        break;
-                }
+                    SeaTurtleNum => new SeaTurtle(AnimalName, "Sea Turtle", "Caretta Turtle", 9.5f),
+                    SeaBirdNum => new SeaBird(AnimalName, "Sea Bird  ", "Emperor Penguin", 15.2f),
+                    _ => new Cetacean(AnimalName, "Cetacean  ", "Listed Dolphin", 20.7f),
+                };
 
                 Print.ChooseRole(TechnicalExp, VetExp);
                 Console.ForegroundColor = ConsoleColor.Green;
@@ -59,11 +52,13 @@ namespace MyProgram
                 Print.RescueMessage(userName);
                 Console.WriteLine();
 
-                Rescue rescue = new Rescue(animal);
-                rescue.Code = Rescue.GenerateCode();
-                rescue.Date = Utility.RegisterDate();
-                rescue.AffectationGrade = Utility.RandomAffectationGrade();
-                rescue.Location = MyLocation;
+                Rescue rescue = new(animal)
+                {
+                    Code = Rescue.GenerateCode(),
+                    Date = Utility.RegisterDate(),
+                    AffectationGrade = Utility.RandomAffectationGrade(),
+                    Location = MyLocation
+                };
 
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine(rescue.ToString());

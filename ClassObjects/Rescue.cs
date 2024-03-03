@@ -1,34 +1,18 @@
 ﻿namespace ObjectClasses
 {
-    public class Rescue
+    public class Rescue(string code, string date, AAnimal family, int affectationGrade, string location)
     {
-        private string? code;
-        private string? date;
-        private AAnimal? family;
-        private int affectationGrade;
-        private string? location;
-
-        public string? Code { get; set; }
-        public string? Date { get; set; }
-        public AAnimal? Family { get; set; }
-        public int AffectationGrade { get; set; }
-        public string? Location { get; set; }
-
-
-        public Rescue(string code, string date, AAnimal family, int affectationGrade, string location)
-        {
-            Code = code;
-            Date = date;
-            Family = family;
-            AffectationGrade = affectationGrade;
-            Location = location;
-        }
+        public string? Code { get; set; } = code;
+        public string? Date { get; set; } = date;
+        public AAnimal? Family { get; set; } = family;
+        public int AffectationGrade { get; set; } = affectationGrade;
+        public string? Location { get; set; } = location;
 
         public Rescue(AAnimal family) : this ("", "", family, 0, "") {}
 
         public static string GenerateCode()
         {
-            Random random = new Random();
+            Random random = new();
             string code = "RES" + random.Next(1000).ToString("000");
 
             return code;

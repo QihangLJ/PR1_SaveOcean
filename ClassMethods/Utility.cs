@@ -29,7 +29,7 @@
 
         public static int RandomAffectationGrade()
         {
-            Random random = new Random();
+            Random random = new();
             return random.Next(1,100);
         }
 
