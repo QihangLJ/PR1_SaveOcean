@@ -28,9 +28,9 @@ namespace MessageClasses
             Console.WriteLine(Message);
         }
 
-        public static void RescueMessage(string name)
+        public static void RescueMessage(string? name)
         {
-            const string Message = "Hello, {0}! The 112 has recieved a call of warning to rescue an animal. The information that they  give us is the next:";
+            const string Message = "Hello {0}! The 112 has recieved a call of warning to rescue an animal. The information that they  give us is the next:";
             Console.WriteLine(Message, name);
         }
 
@@ -39,7 +39,7 @@ namespace MessageClasses
             const string Message = "Here you have the document, for more information:";
             Console.WriteLine(Message);
         }
-        public static void ChooseTreatment(string animalName, int affectationGrade) 
+        public static void ChooseTreatment(string? animalName, int affectationGrade) 
         { 
             const string Message = "The {0} have {1}% of Affectation Grade (AG).";
             const string MsgOptions = "You want to heal it here (1) or move it to a medical centir (2)";

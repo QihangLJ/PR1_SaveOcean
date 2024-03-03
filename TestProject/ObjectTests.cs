@@ -20,7 +20,7 @@ namespace TestProject
             string location = "Barcelona";
 
             //Act
-            Rescue rescue = new Rescue(code, date, family, affectationGrade, location);
+            Rescue rescue = new(code, date, family, affectationGrade, location);
 
             //Assert
             Assert.AreEqual(code, rescue.Code);
@@ -37,7 +37,7 @@ namespace TestProject
             AAnimal family = new SeaTurtle();
 
             //Act
-            Rescue rescue = new Rescue(family);
+            Rescue rescue = new(family);
 
             //Assert
             Assert.AreEqual("", rescue.Code);
@@ -54,7 +54,7 @@ namespace TestProject
 
             //Act
             string result = Rescue.GenerateCode();
-            string numberString = result.Substring(3);
+            string numberString = result[3..];
             int numbers = Convert.ToInt32(numberString);
 
             //Assert
@@ -78,7 +78,7 @@ namespace TestProject
         {
             //Arrange
             AAnimal family = new SeaTurtle("Turtle", "Sea Turtle", "Caretta", 10);
-            Rescue rescue = new Rescue("RES001", "01/01/2024", family, 50, "Barcelona");
+            Rescue rescue = new("RES001", "01/01/2024", family, 50, "Barcelona");
 
             //Act
             string result = rescue.ToString();
@@ -106,7 +106,7 @@ namespace TestProject
             float weight = 10;
 
             //Act
-            SeaTurtle seaTurtle = new SeaTurtle(name, superFamily, species, weight);
+            SeaTurtle seaTurtle = new(name, superFamily, species, weight);
 
             //Assert
             Assert.AreEqual(name, seaTurtle.Name);
@@ -121,7 +121,7 @@ namespace TestProject
             //Arrange
 
             //Act
-            SeaTurtle seaTurtle = new SeaTurtle();
+            SeaTurtle seaTurtle = new();
 
             //Assert
             Assert.AreEqual("", seaTurtle.Name);
@@ -134,7 +134,7 @@ namespace TestProject
         public void SeaTurtleTreatment_HealOption1_ResultEqual()
         {
             //Arrange
-            SeaTurtle seaTurtle = new SeaTurtle();
+            SeaTurtle seaTurtle = new();
             int affectation = 10;
             int option = 1;
 
@@ -149,7 +149,7 @@ namespace TestProject
         public void SeaTurtleTreatment_HealOption2_ResultEqual()
         {
             //Arrange
-            SeaTurtle seaTurtle = new SeaTurtle();
+            SeaTurtle seaTurtle = new();
             int affectation = 10;
             int option = 2;
 
@@ -164,7 +164,7 @@ namespace TestProject
         public void SeaTurtleToString_ReturnsCorrectly()
         {
             //Arrange
-            SeaTurtle seaTurtle = new SeaTurtle("Turtle", "Sea Turtle", "Caretta", 10);
+            SeaTurtle seaTurtle = new("Turtle", "Sea Turtle", "Caretta", 10);
 
             //Act
             string result = seaTurtle.ToString();
@@ -177,7 +177,7 @@ namespace TestProject
         public void SeaTurtleGetDocument_ReturnsCorrectly()
         {
             //Arrange
-            SeaTurtle seaTurtle = new SeaTurtle("Turtle", "Sea Turtle", "Caretta", 10);
+            SeaTurtle seaTurtle = new("Turtle", "Sea Turtle", "Caretta", 10);
 
             //Act
             string result = seaTurtle.GetDocument();
@@ -205,7 +205,7 @@ namespace TestProject
             float weight = 10;
 
             //Act
-            SeaBird seaBird = new SeaBird(name, superFamily, species, weight);
+            SeaBird seaBird = new(name, superFamily, species, weight);
 
             //Assert
             Assert.AreEqual(name, seaBird.Name);
@@ -220,7 +220,7 @@ namespace TestProject
             //Arrange
 
             //Act
-            SeaBird seaBird = new SeaBird();
+            SeaBird seaBird = new();
 
             //Assert
             Assert.AreEqual("", seaBird.Name);
@@ -233,7 +233,7 @@ namespace TestProject
         public void SeaBirdTreatment_HealOption1_ResultEqual()
         {
             //Arrange
-            SeaBird seaBird = new SeaBird();
+            SeaBird seaBird = new();
             int affectation = 10;
             int option = 1;
 
@@ -248,7 +248,7 @@ namespace TestProject
         public void SeaBirdTreatment_HealOption2_ResultEqual()
         {
             //Arrange
-            SeaBird seaBird = new SeaBird();
+            SeaBird seaBird = new();
             int affectation = 10;
             int option = 2;
 
@@ -263,7 +263,7 @@ namespace TestProject
         public void SeaBirdToString_ReturnsCorrectly()
         {
             //Arrange
-            SeaBird seaBird = new SeaBird("Bird", "Sea Bird", "Emperor Penguin", 10);
+            SeaBird seaBird = new("Bird", "Sea Bird", "Emperor Penguin", 10);
 
             //Act
             string result = seaBird.ToString();
@@ -276,7 +276,7 @@ namespace TestProject
         public void SeaBirdGetDocument_ReturnsCorrectly()
         {
             //Arrange
-            SeaBird seaBird = new SeaBird("Bird", "Sea Bird", "Emperor Penguin", 10);
+            SeaBird seaBird = new("Bird", "Sea Bird", "Emperor Penguin", 10);
 
             //Act
             string result = seaBird.GetDocument();
@@ -303,7 +303,7 @@ namespace TestProject
             float weight = 50;
 
             //Act
-            Cetacean cetacean = new Cetacean(name, superFamily, species, weight);
+            Cetacean cetacean = new(name, superFamily, species, weight);
 
             //Assert
             Assert.AreEqual(name, cetacean.Name);
@@ -318,7 +318,7 @@ namespace TestProject
             //Arrange
 
             //Act
-            Cetacean cetacean = new Cetacean();
+            Cetacean cetacean = new();
 
             //Assert
             Assert.AreEqual("", cetacean.Name);
@@ -331,7 +331,7 @@ namespace TestProject
         public void CetaceanTreatment_HealOption1_ResultEqual()
         {
             //Arrange
-            Cetacean cetacean = new Cetacean();
+            Cetacean cetacean = new();
             int affectation = 10;
             int option = 1;
 
@@ -346,7 +346,7 @@ namespace TestProject
         public void CetaceanTreatment_HealOption2_ResultEqual()
         {
             //Arrange
-            Cetacean cetacean = new Cetacean();
+            Cetacean cetacean = new();
             int affectation = 10;
             int option = 2;
 
@@ -361,7 +361,7 @@ namespace TestProject
         public void CetaceanToString_ReturnsCorrectly()
         {
             //Arrange
-            Cetacean cetacean = new Cetacean("Dolphin", "Cetacean", "Listed Dolphin", 50);
+            Cetacean cetacean = new("Dolphin", "Cetacean", "Listed Dolphin", 50);
 
             //Act
             string result = cetacean.ToString();
@@ -374,7 +374,7 @@ namespace TestProject
         public void CetaceanGetDocument_ReturnsCorrectly()
         {
             //Arrange
-            Cetacean cetacean = new Cetacean("Dolphin", "Cetacean", "Listed Dolphin", 50);
+            Cetacean cetacean = new("Dolphin", "Cetacean", "Listed Dolphin", 50);
 
             //Act
             string result = cetacean.GetDocument();

@@ -20,7 +20,7 @@ namespace ObjectClasses
             return affectation - ( (affectation * affectation) + value);
         }
 
-        public override string ToString() => SuperFamily;
+        public override string ToString() => SuperFamily ?? "Null";
 
         public override string GetDocument() =>
             $"+-------------------------------------------------------------+\r\n" +
