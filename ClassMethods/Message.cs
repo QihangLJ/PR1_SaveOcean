@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace InterfaceClasses
+namespace MessageClasses
 {
     public class Print
     {

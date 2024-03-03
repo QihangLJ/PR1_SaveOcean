@@ -1,7 +1,7 @@
 ﻿using System;
 using UtilityClasses;
 using ObjectClasses;
-using InterfaceClasses;
+using MessageClasses;
 
 namespace MyProgram
 {
@@ -11,7 +11,7 @@ namespace MyProgram
         {
             const string MsgInvalidValue = "Invalid value, please enter a valid value.";
             const string MsgExit = "Leaving the program...";
-            const string AnimalName = "Dolphin", MyLocation = "Barcelona";
+            const string AnimalName = "Dally", MyLocation = "Barcelona";
 
             const int Play = 1, Offset = 1, InputMin = 1, InputMax = 2;
             const int SeaTurtleNum = 1, SeaBirdNum = 2, CetaceanNum = 3;
@@ -30,7 +30,7 @@ namespace MyProgram
             if (userInput == Play)
             {
                 AAnimal animal;
-                switch (3)
+                switch (random.Next(SeaTurtleNum, CetaceanNum + Offset))
                 {
                     case SeaTurtleNum:
                         animal = new SeaTurtle(AnimalName, "Sea Turtle", "Caretta Turtle", 9.5f);
@@ -39,7 +39,7 @@ namespace MyProgram
                         animal = new SeaBird(AnimalName, "Sea Bird  ", "Emperor Penguin", 15.2f);
                         break;
                     default:
-                        animal = new Cetacean(AnimalName, "Cetacean  ", "Listed Dolphin", 20);
+                        animal = new Cetacean(AnimalName, "Cetacean  ", "Listed Dolphin", 20.7f);
                         break;
                 }
 
