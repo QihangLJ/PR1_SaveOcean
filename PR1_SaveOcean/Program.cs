@@ -1,7 +1,7 @@
 ﻿using System;
 using UtilityClasses;
 using ObjectClasses;
-using InterfaceClasses;
+using MessageClasses;
 
 namespace MyProgram
 {
