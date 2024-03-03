@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ObjectClasses
 {
@@ -13,12 +12,25 @@ namespace ObjectClasses
             base(name, superFamily, species, weight)
         { }
 
-        public override int Treatment(int affectation, int value)
+        public Cetacean() : base() { }
+
+        public override int Treatment(int affectation, int healOption)
         {
+            int value = healOption == 1 ? 25 : 0;
             double doubleValue = Convert.ToDouble(affectation);
             return (int)(affectation - Math.Log10(doubleValue) - value);
         }
 
+        public override string ToString() => SuperFamily;
+
+        public override string GetDocument() =>
+            $"+-------------------------------------------------------------+\r\n" +
+            $"|                           DOCUMENT                          |\r\n" +
+            $"+-------------------------------------------------------------+\r\n" +
+            $"| # Name | Super Family      | Species         | Weigth       |\r\n" +
+            $"+-------------------------------------------------------------+\r\n" +
+            $"| {Name}  | {SuperFamily}        | {Species}  | {Weight}kg       |\r\n" +
+            $"+-------------------------------------------------------------+";
     }
 }
 

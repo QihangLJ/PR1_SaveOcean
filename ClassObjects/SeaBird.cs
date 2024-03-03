@@ -12,10 +12,25 @@ namespace ObjectClasses
             base(name, superFamily, species, weight)
         { }
 
-        public override int Treatment(int affectation, int value)
+        public SeaBird() : base() { }
+
+        public override int Treatment(int affectation, int healOption)
         {
+            int value = healOption == 1 ? 5 : 0;
             return affectation - ( (affectation * affectation) + value);
         }
+
+        public override string ToString() => SuperFamily;
+
+        public override string GetDocument() =>
+            $"+-------------------------------------------------------------+\r\n" +
+            $"|                           DOCUMENT                          |\r\n" +
+            $"+-------------------------------------------------------------+\r\n" +
+            $"| # Name | Super Family      | Species         | Weigth       |\r\n" +
+            $"+-------------------------------------------------------------+\r\n" +
+            $"| {Name}  | {SuperFamily}        | {Species} | {Weight}kg       |\r\n" +
+            $"+-------------------------------------------------------------+";
+
     }
 }
 
