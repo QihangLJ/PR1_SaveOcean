@@ -10,6 +10,10 @@
 
         public Rescue(AAnimal family) : this ("", "", family, 0, "") {}
 
+        /// <summary>
+        /// Method that returns a code which is a string with the next format ("RES" + a random number between 0 and 999 with 3 digits).
+        /// </summary>
+        /// <returns> A String which contains "RES" + number of 3 digits  between 0 and 999. </returns>
         public static string GenerateCode()
         {
             Random random = new();
@@ -18,7 +22,11 @@
             return code;
         }
 
-        public override string ToString() => 
+        /// <summary>
+        /// Method to get the document of the rescue, with all the information about it.
+        /// </summary>
+        /// <returns>A String with all the information in a table format. </returns>
+        public string GetDocument() => 
             $"+-------------------------------------------------------------+\r\n" +
             $"|                           RESCUE                            |\r\n" +
             $"+-------------------------------------------------------------+\r\n" +

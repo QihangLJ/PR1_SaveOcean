@@ -74,14 +74,14 @@ namespace TestProject
         }
 
         [TestMethod]
-        public void ToString_ReturnsCorrectly()
+        public void GetDocument_ReturnsCorrectly()
         {
             //Arrange
             AAnimal family = new SeaTurtle("Turtle", "Sea Turtle", "Caretta", 10);
             Rescue rescue = new("RES001", "01/01/2024", family, 50, "Barcelona");
 
             //Act
-            string result = rescue.ToString();
+            string result = rescue.GetDocument();
 
             //Assert
             Assert.AreEqual("+-------------------------------------------------------------+\r\n" +

@@ -61,7 +61,7 @@ namespace MyProgram
                 };
 
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine(rescue.ToString());
+                Console.WriteLine(rescue.GetDocument());
                 Console.WriteLine();
 
                 Console.ForegroundColor = ConsoleColor.Yellow;
