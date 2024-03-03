@@ -60,7 +60,7 @@ namespace InterfaceClasses
 
         public static void ExperienceResultMessage(int value)
         {
-            const string Message = "Your total experience {0}";
+            const string Message = "Your total experience {0}XP!";
             Console.WriteLine(Message, value);
         }
 
