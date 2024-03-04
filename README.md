@@ -2,7 +2,7 @@
 
 - [Main del programa](/PR1_SaveOcean/Program.cs)
 - [Classes amb Objectes](/ClassObject)
-    1. [Rescue](/ClassObject/Rescue.cs)
+    1. [Rescue](/ClassObjects/Rescue.cs)
     2. [AAnimal](/ClassObjects/AAnimal.cs)
     3. [SeaTurtle](/ClassObjects/SeaTurtle.cs)
     4. [SeaBird](/ClassObject/SeaBird.cs)
